@@ -334,3 +334,32 @@ hr{
 .credits{
     padding:10px;
 }
+
+@media (min-width:768px) and (max-width:1024) {
+   /* iteration 2 = width>768 and with< 1024
+    header shuld go from 1  column to display 2 (1content and buttons other image)
+    Company logos displayed in a single row
+    section "Teams large an..." list item and buttons displayed horizontally as rows.
+    the subfooter items (before as a column) displays now as a single row*/
+
+
+    
+}
+
+@media (min-width:1024) and (max-width:1440) {
+ /*   iteration 3 = width> 1024px, with < 1440px. 
+    navbar should now display menu links, icosn should be hidden
+    the main should now display content in 2 columns; one column ofr the heading and text and the other for the image
+    the section "welcome to your new digtial HQ" now have teh buttosn dipslayes horizontally as rows.
+iteration 4 = width > 1440px
+*/
+    
+}
+
+@media (min-width:1440){
+
+ /*   iteration 4 = width > 1440px
+    the sign up button in the hedaer should now be displayed horizontally, next to each other. 
+    The image shown in the header should be centered and fully visible.
+    */
+}
