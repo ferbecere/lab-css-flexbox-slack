@@ -71,7 +71,7 @@ body{
     color:#540B51;
     border:none;
     border-radius: 4px;   
-    margin:4px 20px;
+    margin:4px 16px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight:600;
@@ -85,7 +85,7 @@ body{
     align-items: center;
     padding: 2px;
     border-radius:4px;
-    margin:4px 20px;
+    margin:4px 16px;
     gap:6px;
     height: 36px;
 }
@@ -201,8 +201,22 @@ h3{
 }
 
 .whiteSection ul{
+    display:flex;
+    flex-direction: column;
+    row-gap: 36px;
     list-style: none;
     font-weight: 700;
+    padding:0 88px;
+    margin-top: 48px;
+}
+
+.whiteSection p{
+    margin: 0 0 ;
+}
+
+.whiteSection > p{
+    font-size:large;
+    margin: 16px 0 ;
 }
 .whiteSection span{
     font-size:xx-large;
@@ -213,7 +227,7 @@ h3{
     background-color:#540B51;
     color:white;
     border-radius: 4px;  
-    margin:4px 20px;
+    margin:4px 0px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight:600;
@@ -224,7 +238,7 @@ h3{
     color:white;
     border:1px solid white ;
     border-radius: 4px;  
-    margin:4px 20px;
+    margin:4px 0;
     text-transform: uppercase;
     font-size: 12px;
     font-weight:600;
@@ -235,7 +249,7 @@ h3{
     background-color: white;
     border:1px #540B51 solid;
     border-radius: 4px;   
-    margin:4px 20px;
+    margin:4px 0;
     text-transform: uppercase;
     font-size: 12px;
     font-weight:600;
@@ -250,7 +264,7 @@ h3{
 }
 .contactSection h3{
     color:white;
-    margin: 0;
+    margin: 0 0 24px 0;
     padding: 2px 0px;
 }
 
@@ -260,22 +274,29 @@ h3{
     clip-path: ellipse(50% 40% at 50% 0%);
 }
 
+footer img{
+    width:48px;
+    padding-left: 16px;
+}
+
 .lists{
     display:flex;
-    gap:20px 25px;
+    gap:20px 8px;
     justify-content: space-between;
-    height:300px;
-    
+    flex-wrap: wrap;
+    flex-grow: 1;
+      
 }
 .lists ul{
 
     list-style:none;
-    align-items: stretch;
     align-content: center;
-    padding:0;
+    padding: 0;
     margin: 40px 20px 20px 20px;
-   
-;
+}
+
+.lists li{
+    padding:8px 0;
 }
 .lists li:nth-child(1){
     font-weight:bolder;
@@ -286,6 +307,30 @@ hr{
     opacity: 50%; 
 }
 .statusInfo{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
     list-style: none;
+    font-weight: 700;
+    margin: 36px 0;
+}
+.statusInfo li:nth-child(7){
+    color:#2E71A6;
+}
 
+.fabIcons{
+    display:flex;
+    list-style:none;
+    justify-content:space-between;
+    padding:10px;
+    margin: 16px;
+    
+}
+
+.fabIcons i{
+    font-size: 24px;
+}
+
+.credits{
+    padding:10px;
 }
