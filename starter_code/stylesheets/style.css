@@ -64,7 +64,12 @@ body{
     background: url(./images/icon/icon-menu.png) no-repeat;
     border:none;
 }
-
+.connectMobile{
+    display:flex;
+}
+.connectDesktop{
+    display:none;
+}
 /*Estilos buttons signup*/
 /*
 .email{
@@ -457,8 +462,14 @@ hr{
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+    .connectMobile{
+        display:none;
+    }
+    .connectDesktop{
+        display:flex;
+    }
 
-    .heroImage{
+        .heroImage{
         width: fit-content;
         padding:0px;
         margin:0px;
