@@ -29,7 +29,7 @@ iteration 4 = width > 1440px
     }
 
 */
-/*
+
 body{
     max-width: 768px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -64,14 +64,9 @@ body{
     background: url(./images/icon/icon-menu.png) no-repeat;
     border:none;
 }
-.connectMobile{
-    display:flex;
-}
-.connectDesktop{
-    display:none;
-}
+
 /*Estilos buttons signup*/
-/*
+
 .email{
     color:#540B51;
     border:none;
@@ -172,7 +167,7 @@ padding: 48px;
     gap:36px;
 }
 /*revisar tema alturas*/
-/*
+
 .corpoLogos img{
     height:60px;
 }
@@ -195,6 +190,15 @@ h2{
     font-weight: 600;
 }
 
+.imageMobile{
+    display:flex;
+}
+.imageDesktop{
+    display:none;
+}
+.imageDesktopAlt{
+    display:none;
+}
 
 h3{
    font-size: xx-large;
@@ -340,10 +344,10 @@ hr{
 .credits{
     padding:10px;
 }
-*/
-/*
-@media (min-width:768px) and (max-width:1024) {
-    */
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    
    /* iteration 2 = width>768 and with< 1024
     header shuld go from 1  column to display 2 (1content and buttons other image)
     Company logos displayed in a single row
@@ -351,7 +355,8 @@ hr{
     the subfooter items (before as a column) displays now as a single row*/
 
     body{
-        max-width: 1024px;  
+       max-width: 1024px;  
+       background-color: green;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*esto en principo no hara falta si el medaiqueryfunciona*/
     }
     
@@ -427,7 +432,25 @@ hr{
         font-size: 12px;
         font-weight:600;
     }
-    .groupButtons{
+    header .groupButtons{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    
+    .sectionWhite .groupButtons{
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    .contactSection .groupButtons{
         display:flex;
         flex-direction:column;
         flex-wrap: wrap;
@@ -435,7 +458,7 @@ hr{
         justify-items: center;
         align-items: flex-start;
         }
-    
+        
     h1{
         font-size: 60px;
         margin:0;
@@ -457,19 +480,32 @@ hr{
         /*esto mo hace falta si consigo poner las dos cosas en dos columnas*/
     }
 
-    .upperZone .groupButtons{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .connectMobile{
+    .imageMobile{
         display:none;
     }
-    .connectDesktop{
+    .imageDesktop{
         display:flex;
+        justify-content:flex-start;
+        width:25px;
+        padding-right:10%;
+        background-color: #F3EAE2;
+
+
+        /* tenemos qu ehacer 100px de margin del texto y 65px de margin de la imagen */
+    
+    }
+    .imageDesktopAlt{
+        display:flex;
+        justify-content:flex-start;
+        width:25px;
+        padding-left:10%;
+        background-color: #F3EAE2;
+
+        /* tenemos qu ehacer 100px de margin del texto y 65px de margin de la imagen */
+    
     }
 
-        .heroImage{
+    .heroImage{
         width: fit-content;
         padding:0px;
         margin:0px;
@@ -486,7 +522,7 @@ hr{
     text-align: center;
     text-transform:uppercase;
     font-weight: 700;
-    padding: 48px;
+    /* padding: 48px; */
     }
     
     .firstSection p{
@@ -498,20 +534,19 @@ hr{
     }
     
     .corpoLogos{
-        max-width: 768px;
-        flex-wrap: wrap;
+        max-width: auto;
+        flex-wrap:nowrap;
         width:100%;
         height:auto;
         display:flex;
         align-items: center;
         align-content: space-around;
-        justify-content: space-evenly;
-        padding:16px;
-        gap:36px;
+        
+        
     }
     /*revisar tema alturas*/
     .corpoLogos img{
-        height:60px;
+        height:1.5vh;
     }
     
     h2{
@@ -524,28 +559,30 @@ hr{
         background-color: #F3EAE2;
         padding: 36px 16px;
         font-weight: 600;
+        padding:0 10%;
+        max-width: 1024px;;
       
     }
     .textSection a{
         text-decoration: none;
         color:#2E71A6;
         font-weight: 600;
+        max-width: 1024px;
     }
-    
-    
+  
     h3{
        font-size: xx-large;
        color:#191817;
     }
     .whiteSection{
         text-align: center;
-       font-weight: 600;
-       padding:36px 16px;
+        font-weight: 600;
+        padding:36px 16px;
     }
     
     .whiteSection ul{
         display:flex;
-        flex-direction: column;
+        flex-direction: row;
         row-gap: 36px;
         list-style: none;
         font-weight: 700;
@@ -565,6 +602,14 @@ hr{
         font-size:xx-large;
         color: #540B51;
         font-weight: bolder;
+    }
+    .whiteSection .groupButtons{
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+
+        /* padding-left: 400px; no idea de esto */
     }
     .slackButton{
         background-color:#540B51;
@@ -628,6 +673,7 @@ hr{
         justify-content: space-between;
         flex-wrap: wrap;
         flex-grow: 1;
+        padding-left: 8px;
           
     }
     .lists ul{
@@ -648,10 +694,15 @@ hr{
        border:none;
        border-top:1px dotted black;
         opacity: 50%; 
+        margin:8px;
     }
     .statusInfo{
         display:flex;
         flex-direction: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin: 8px;;
         gap: 15px;
         list-style: none;
         font-weight: 700;
@@ -664,9 +715,11 @@ hr{
     .fabIcons{
         display:flex;
         list-style:none;
-        justify-content:space-between;
+        justify-content:flex-start;
         padding:10px;
         margin: 16px;
+        gap:16px;
+        margin-left: 24px;
         
     }
     
@@ -677,11 +730,11 @@ hr{
     .credits{
         padding:10px;
     }
-   /* 
-}*/
+   
+}
 
 /*
-@media (min-width:1024) and (max-width:1440) {
+@media (min-width:1024px) and (max-width:1440px) {
  /*   iteration 3 = width> 1024px, with < 1440px. 
     navbar should now display menu links, icosn should be hidden
     the main should now display content in 2 columns; one column ofr the heading and text and the other for the image
@@ -692,7 +745,7 @@ iteration 4 = width > 1440px
     
 
 /*
-@media (min-width:1440){
+@media (min-width:1440px){
 
  /*   iteration 4 = width > 1440px
     the sign up button in the hedaer should now be displayed horizontally, next to each other. 
